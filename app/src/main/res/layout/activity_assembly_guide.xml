@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".assembly_guide">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Stepbystep">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!-- Step-by-Step Assembly Guide -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Step Progress Indicator -->
+                    <ProgressBar
+                        android:id="@+id/step_progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:progress="20"
+                        android:max="100"
+                        style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                    <!-- Step Title -->
+                    <TextView
+                        android:id="@+id/assembly_step_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Step Title"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Safety Warnings Section -->
+                    <LinearLayout
+                        android:id="@+id/safety_warning_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/warnings_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Safety Warnings"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp" />
+
+                        <TextView
+                            android:id="@+id/warnings_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Safety warnings for this step will be displayed here."
+                            android:textSize="16sp"
+                            android:layout_marginBottom="20dp" />
+                    </LinearLayout>
+
+                    <!-- Step Image -->
+                    <ImageView
+                        android:id="@+id/assembly_step_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/placeholder_image"
+                        android:contentDescription="Image showing how to install the CPU"
+                        android:layout_marginBottom="10dp" />
+
+                    <!-- Step Description -->
+                    <TextView
+                        android:id="@+id/assembly_step_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Step description goes here."
+                        android:textSize="16sp"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Step Completion Checkbox -->
+                    <CheckBox
+                        android:id="@+id/step_completed_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mark this step as completed"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Navigation Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end">
+
+                        <Button
+                            android:id="@+id/previous_step_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Previous"
+                            android:layout_marginEnd="10dp"
+                            android:enabled="false" />
+
+                        <Button
+                            android:id="@+id/next_step_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next" />
+                    </LinearLayout>
+
+                    <!-- Tips Section -->
+                    <TextView
+                        android:id="@+id/tips_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tips for This Step"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:id="@+id/tips_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tips for this step will be displayed here."
+                        android:textSize="16sp"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Video Tutorial Section -->
+                    <TextView
+                        android:id="@+id/video_tutorial_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Video Tutorial"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <VideoView
+                        android:id="@+id/assembly_step_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
