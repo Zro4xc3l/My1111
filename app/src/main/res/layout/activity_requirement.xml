@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".requirement">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title for the checklist -->
+        <TextView
+            android:id="@+id/checklist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PC Assembly Requirements"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tools Section - CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tools_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required Tools"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/check_screwdriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Screwdriver (Phillips & Flat)" />
+
+                <CheckBox
+                    android:id="@+id/check_thermal_paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thermal Paste" />
+
+                <CheckBox
+                    android:id="@+id/check_anti_static_bracelet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anti-static Bracelet" />
+
+                <CheckBox
+                    android:id="@+id/check_plastic_spudger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plastic Spudger" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Components Section - CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/components_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required Components"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/check_cpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CPU" />
+
+                <CheckBox
+                    android:id="@+id/check_motherboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Motherboard" />
+
+                <CheckBox
+                    android:id="@+id/check_ram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RAM" />
+
+                <CheckBox
+                    android:id="@+id/check_storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Storage (HDD/SSD)" />
+
+                <CheckBox
+                    android:id="@+id/check_power_supply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Power Supply Unit (PSU)" />
+
+                <!-- Optional Graphics Card -->
+                <CheckBox
+                    android:id="@+id/check_graphics_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Graphics Card (GPU) - Optional"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:layout_marginTop="8dp" />
+
+                <CheckBox
+                    android:id="@+id/check_case"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PC Case" />
+
+                <CheckBox
+                    android:id="@+id/check_peripherals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peripherals (Keyboard, Mouse, Monitor)" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Final Step: All items ready -->
+        <TextView
+            android:id="@+id/ready_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All items are ready!"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

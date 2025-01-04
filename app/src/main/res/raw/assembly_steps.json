@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Step 1: Install the CPU",
+    "safetyWarning": "Handle the CPU with care, avoid touching the pins.",
+    "imageResId": "step1_image",
+    "description": "Carefully align the CPU with the socket and gently place it.",
+    "tips": "Make sure to align the triangle mark on the CPU with the triangle on the socket.",
+    "videoResId": "video_step1"
+  },
+  {
+    "title": "Step 2: Install the CPU Cooler",
+    "safetyWarning": "Ensure the cooler is mounted properly to avoid overheating.",
+    "imageResId": "step2_image",
+    "description": "Attach the CPU cooler and secure it in place.",
+    "tips": "Apply an even amount of thermal paste before placing the cooler.",
+    "videoResId": "video_step2"
+  },
+  {
+    "title": "Step 3: Insert RAM",
+    "safetyWarning": "Apply equal pressure when inserting RAM to avoid damaging slots.",
+    "imageResId": "step3_image",
+    "description": "Insert the RAM into the correct slots, applying even pressure.",
+    "tips": "Check the motherboard manual for dual-channel configurations.",
+    "videoResId": "video_step3"
+  },
+  {
+    "title": "Step 4: Install GPU",
+    "safetyWarning": "Check that the GPU is securely inserted into the PCIe slot.",
+    "imageResId": "step4_image",
+    "description": "Install the GPU into the PCIe slot on the motherboard.",
+    "tips": "Make sure to connect the power cable to the GPU if required.",
+    "videoResId": "video_step4"
+  }
+]

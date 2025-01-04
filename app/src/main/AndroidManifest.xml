@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MyFfff"
         tools:targetApi="31">
         <activity
+            android:name=".safety_warning"
+            android:exported="false" />
+        <activity
+            android:name=".requirement"
+            android:exported="false" />
+        <activity
             android:name=".assembly_guide"
             android:exported="false" />
         <activity
